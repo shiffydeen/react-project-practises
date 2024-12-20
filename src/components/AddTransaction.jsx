@@ -6,23 +6,24 @@ const AddTransaction = () => {
     const {addTransac} = useContext(GlobalStates)
 
     const [text, setText] = useState('');
-    const [amount, setAmount] = useState('');
-
-    // console.log(text);
-    // console.log(amount);
-
+    const [amount, setAmount] = useState();
 
 
     const handleSubmit = (e) => {
+
         e.preventDefault();
 
         const newTransaction = {
             id: Math.floor(Math.random() * 100000000),
             text, 
-            amount: +amount
+            amount: Number(amount)
         }
 
-        addTransac(newTransaction)
+        // console.log(newTransaction);
+        // console.log(addTransac)
+        // console.log(typeof text);
+        // console.log(typeof Number(amount));
+        addTransac(newTransaction);
     }
 
   return (

@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useState, useContext} from 'react'
 import { GlobalStates } from '../context/GlobalStates';
 
 const IncomeExpenses = () => {
@@ -9,10 +9,8 @@ const IncomeExpenses = () => {
     const incomeTotal = amount.filter(item => item > 0).reduce((acc, curr) => acc += curr, 0);
     const expenseTotal = amount.filter(item => item < 0).reduce((acc, curr) => acc += curr, 0);
 
-
-    
-
-    
+    console.log(incomeTotal);
+    console.log(expenseTotal)
 
 
   return (
